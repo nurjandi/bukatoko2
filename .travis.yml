@@ -1,23 +1,13 @@
 language: php
-php: 
-  - 5.5.15
-
+php: "5.6"
+services: mysql
+before_install:
+ mysql -e 'CREATE DATABASE konveksion;'
 before_script:
-  - composer self-update --rollback
-  - composer install --prefer-source --no-interaction --dev
-
-# Commands you want to run that will verify your build.
-script: phpunit
-dist: precise
-
-# allow_failures: Allow this build to fail under the specified environments.
-# fast_finish: If your build fails do not continue trying to build, just stop.
+  - curl -s http://getcomposer.org/installer | php
+  - php composer.phar install 
+script: phpunit UnitTestingTest.php
 matrix:
-  allow_failures:
-    - php: 5.5.15
-  fast_finish: true
-
-# Customize when the notification emails are sent.
-notifications:
-    on_success: never
-    on_failure: always
+ allow_failures: 
+  php: "5.6"
+ fast_finish: true
