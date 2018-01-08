@@ -2,14 +2,16 @@
 	class UnitTesting{
 		public function select(){
 			include "koneksi.php";
-			$sql = "SELECT * FROM akun;";
+			$sql = "SELECT * FROM akun";
 			$query = $db->prepare($sql);
 			$query->execute();
 			if($query->rowCount()>0){
-				return true;
+				$hasil="true";
+				return $hasil;
 			}
 			else{
-				return false;
+				$hasil="false";
+				return $hasil;
 			}
 		}
 		/*public function delete_data($id){
