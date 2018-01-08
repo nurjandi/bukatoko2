@@ -2,7 +2,7 @@
 	class UnitTesting{
 		public function select(){
 			include "koneksi.php";
-			$sql = "SELECT * FROM akun";
+			$sql = "select * from 'akun'";
 			$query = $db->prepare($sql);
 			$query->execute();
 			if($query->rowCount()>0){
