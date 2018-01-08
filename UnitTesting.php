@@ -28,7 +28,7 @@
 		}*/
 		public function tesjual($jml, $harga){
 			$total = $harga * $jml;
-			$saldo = 200000;
+			$saldo = 200;
 			$sisa = $saldo - $total;
 			return $sisa;
 		}
