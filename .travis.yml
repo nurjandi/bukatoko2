@@ -2,7 +2,7 @@ language: php
 php: "5.4"
 services: postgresql
 before_install:
- - psql -c 'create database bukatoko;' -U postgres
+  - psql -c 'create database bukatoko' -U postgres
   - composer self-update
   - composer install --no-interaction
 
