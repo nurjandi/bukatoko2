@@ -32,5 +32,15 @@
 			$sisa = $saldo - $total;
 			return $sisa;
 		}
+		public function tesrating($rate1, $rate2, $rate3, $rate4, $rate5){
+			$rating_jumlah = $rate1 + $rate2 + $rate3 + $rate4 + $rate5;
+			$rate_total = $rating_jumlah/5;
+			if($rate_total>5){
+				return "false";
+			}
+			else{
+				return "true";
+			}
+		}
 	}
 ?>

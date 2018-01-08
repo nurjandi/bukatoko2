@@ -17,5 +17,9 @@
 			$result = $this->UnitTesting->tesjual(5,2000);
 			$this->assertEquals('190000',$result);
 		}
+		public function testRating(){
+			$result = $this->UnitTesting->tesrating(5,4,3,2,1);
+			$this->assertEquals('true',$result);
+		}
 	}
 ?>
