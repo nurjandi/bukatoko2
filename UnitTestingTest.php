@@ -1,5 +1,6 @@
 <?php
 	require 'UnitTesting.php';
+	include "koneksi.php"
 	class UnitTestingTest extends PHPUnit_Framework_TestCase{
 		protected function setUp(){
 			$this->UnitTesting = new UnitTesting();
