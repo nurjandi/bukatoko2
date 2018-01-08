@@ -5,8 +5,7 @@
 			$sql = "SELECT * FROM akun";
 			$query = $db->prepare($sql);
 			$query->execute();
-			$row = $q->fetchAll();
-			if($q->rowCount()>0){
+			if($query->rowCount()>0){
 				return true;
 			}
 			else{

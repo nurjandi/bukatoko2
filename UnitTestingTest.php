@@ -6,7 +6,7 @@
 		}
 		public function testSelect(){
 			$result = $this->UnitTesting->select();
-			$this->assertFalse($result);
+			$this->assertTrue($result);
 		}
 		/*public function testDelete(){
 			$result = $this->UnitTesting->delete_data(1);
