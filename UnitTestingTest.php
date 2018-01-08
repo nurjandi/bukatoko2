@@ -5,13 +5,17 @@
 		protected function setUp(){
 			$this->UnitTesting = new UnitTesting();
 		}
-		public function testSelect(){
+		/*public function testSelect(){
 			$result = $this->UnitTesting->select();
 			$this->assertEquals('true',$result);
 		}
-		/*public function testDelete(){
-			$result = $this->UnitTesting->delete_data(1);
-			$this->assertFalse($result);
+		public function testDelete(){
+			$result = $this->UnitTesting->sum_data(1);
+			$this->assertEquals('5',$result);
 		}*/
+		public function testJual(){
+			$result = $this->UnitTesting->tesjual(5,2000);
+			$this->assertEquals('190000',$result);
+		}
 	}
 ?>
